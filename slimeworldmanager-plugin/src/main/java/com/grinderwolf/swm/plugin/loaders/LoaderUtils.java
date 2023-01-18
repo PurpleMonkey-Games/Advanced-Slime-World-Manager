@@ -6,10 +6,10 @@ import com.grinderwolf.swm.plugin.config.DatasourcesConfig;
 import com.grinderwolf.swm.plugin.loaders.file.FileLoader;
 import com.grinderwolf.swm.plugin.loaders.mongo.MongoLoader;
 import com.grinderwolf.swm.plugin.loaders.mysql.MysqlLoader;
-import com.grinderwolf.swm.plugin.loaders.redis.RedisLoader;
+//import com.grinderwolf.swm.plugin.loaders.redis.RedisLoader;
 import com.grinderwolf.swm.plugin.log.Logging;
 import com.mongodb.MongoException;
-import io.lettuce.core.RedisException;
+//import io.lettuce.core.RedisException;
 
 import java.io.File;
 import java.io.IOException;
@@ -56,15 +56,15 @@ public class LoaderUtils {
             }
         }
 
-        DatasourcesConfig.RedisConfig redisConfig = config.getRedisConfig();
-        if(redisConfig.isEnabled()){
-          try{
-            registerLoader("redis", new RedisLoader(redisConfig));
-          }catch (RedisException ex){
-            Logging.error("Failed to establish connection to the Redis server:");
-            ex.printStackTrace();
-          }
-        }
+//        DatasourcesConfig.RedisConfig redisConfig = config.getRedisConfig();
+//        if(redisConfig.isEnabled()){
+//          try{
+//            registerLoader("redis", new RedisLoader(redisConfig));
+//          }catch (RedisException ex){
+//            Logging.error("Failed to establish connection to the Redis server:");
+//            ex.printStackTrace();
+//          }
+//        }
     }
 
     public static List<String> getAvailableLoadersNames() {

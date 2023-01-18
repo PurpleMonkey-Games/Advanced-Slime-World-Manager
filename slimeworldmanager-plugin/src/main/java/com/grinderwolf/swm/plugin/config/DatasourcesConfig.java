@@ -18,9 +18,9 @@ public class DatasourcesConfig {
     @Setting("mongodb")
     @Setter
     private MongoDBConfig mongoDbConfig = new MongoDBConfig();
-    @Setting("redis")
-    @Setter
-    private RedisConfig redisConfig = new RedisConfig();
+//    @Setting("redis")
+//    @Setter
+//    private RedisConfig redisConfig = new RedisConfig();
 
     @Getter
     @ConfigSerializable
@@ -104,15 +104,15 @@ public class DatasourcesConfig {
 
     }
 
-    @Getter
-    @ConfigSerializable
-    public static class RedisConfig {
-
-        @Setting("enabled")
-        @Setter
-        private boolean enabled = false;
-        @Setting("uri")
-        @Setter
-        private String uri = "redis://127.0.0.1/";
-    }
+//    @Getter
+//    @ConfigSerializable
+//    public static class RedisConfig {
+//
+//        @Setting("enabled")
+//        @Setter
+//        private boolean enabled = false;
+//        @Setting("uri")
+//        @Setter
+//        private String uri = "redis://127.0.0.1/";
+//    }
 }

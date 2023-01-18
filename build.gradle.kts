@@ -19,6 +19,7 @@ allprojects {
     version = "2.10.0-SNAPSHOT"
 
     apply(plugin = "java")
+    apply(plugin = "idea")
     apply(plugin = "io.freefair.lombok")
     apply(plugin = "org.kordamp.gradle.profiles")
 
